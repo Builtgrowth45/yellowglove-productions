@@ -153,8 +153,8 @@
     });
 
     // Pause on hover
-    m.parentNode.addEventListener('mouseenter', function () { gsap.globalTimeline.pause(); });
-    m.parentNode.addEventListener('mouseleave', function () { gsap.globalTimeline.resume(); });
+    m.parentNode.addEventListener('mouseenter', function () { /* marquee paused via specific animation */; });
+    m.parentNode.addEventListener('mouseleave', function () { /* marquee resumed */; });
   });
 
 

@@ -1,3 +1,19 @@
+/* Design Token System */
+:root{
+  --yg-yellow:#FBB038;
+  --yg-yellow-dim:rgba(251,176,56,.12);
+  --yg-yellow-glow:rgba(251,176,56,.25);
+  --yg-black:#0a0a0a;
+  --yg-dark:#111111;
+  --yg-surface:#161616;
+  --yg-navy:#1A1A2E;
+  --yg-border:#252525;
+  --yg-muted:#888888;
+}
+
+.topo{background-color:var(--yg-black);background-image:radial-gradient(ellipse 50% 40% at 15% 20%,rgba(251,176,56,.055) 0%,transparent 100%),radial-gradient(ellipse 30% 25% at 85% 80%,rgba(251,176,56,.04) 0%,transparent 100%);background-size:100% 100%,100% 100%;}
+.topo-navy{background-color:var(--yg-navy);background-image:radial-gradient(ellipse 60% 50% at 20% 30%,rgba(251,176,56,.06) 0%,transparent 100%),radial-gradient(ellipse 35% 30% at 80% 70%,rgba(251,176,56,.04) 0%,transparent 100%);background-size:100% 100%,100% 100%;}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700&display=swap');
@@ -539,3 +555,16 @@ a { cursor: none; }
 /* Yellow BG CTA section */
 .yg-cta-section{background:#FBB038;overflow:hidden;position:relative;}
 .yg-cta-icon-bg{position:absolute;right:-40px;bottom:-60px;font-size:18rem;opacity:.07;line-height:1;user-select:none;pointer-events:none;transform:rotate(-15deg);}
+
+.skip-link:focus,.skip-link:focus-visible{left:1rem!important;outline:3px solid var(--yg-yellow);outline-offset:2px;}
+
+/* Focus-visible for keyboard navigation */
+a:focus-visible,button:focus-visible,.push-button:focus-visible,.yg-filter-btn:focus-visible,.cat-btn:focus-visible{
+  outline:3px solid var(--yg-yellow)!important;
+  outline-offset:3px!important;
+  border-radius:2px;
+}
+/* Smooth image transitions */
+img{transition:transform .6s cubic-bezier(.25,.46,.45,.94);}
+/* Prevent layout shift on font load */
+.yg-hero-wordmark,.bc-title,.bc-num{font-display:swap;}
