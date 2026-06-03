@@ -306,6 +306,75 @@
     if(ctaDiv) gsap.from(ctaDiv.children,{opacity:0,y:20,duration:0.6,stagger:0.15,ease:'power2.out',delay:1.7});
   }
 
+
+
+  // ── SECTION ENTRANCE ANIMATIONS ──────────────────────────────────────────────
+  // Every .yg-eyebrow animates its line from scaleX 0
+  gsap.utils.toArray('.yg-eyebrow, p[style*="eyebrow"], p[style*="Barlow Condensed"][style*="10px"]').forEach(function(el) {
+    var line = el.querySelector('span:first-child');
+    if (!line) return;
+    gsap.from(line, {
+      scrollTrigger: {trigger: el, start: 'top 88%', once: true},
+      scaleX: 0, transformOrigin: 'left', duration: .5, ease: 'power2.out'
+    });
+  });
+
+  // Work cards: stagger in with clip-path reveal (cinematic wipe)
+  var workItems = document.querySelectorAll('.yg-work-item');
+  if (workItems.length) {
+    gsap.from(workItems, {
+      scrollTrigger: {trigger: workItems[0].closest('.row, div'), start: 'top 85%', once: true},
+      opacity: 0, scale: .96, duration: .7, stagger: .08, ease: 'power2.out'
+    });
+  }
+
+  // Testimonial cards: slide in from alternating sides
+  gsap.utils.toArray('.testi').forEach(function(card, i) {
+    gsap.from(card, {
+      scrollTrigger: {trigger: card, start: 'top 88%', once: true},
+      opacity: 0, x: i % 2 === 0 ? -30 : 30, duration: .6, ease: 'power2.out', delay: (i % 3) * .1
+    });
+  });
+
+  // Blog cards: cascade up
+  gsap.utils.toArray('.bc').forEach(function(card, i) {
+    gsap.from(card, {
+      scrollTrigger: {trigger: card, start: 'top 90%', once: true},
+      opacity: 0, y: 40, duration: .6, ease: 'power2.out', delay: (i % 3) * .12
+    });
+  });
+
+  // Kinetic stats: individual counter per stat on scroll
+  document.querySelectorAll('[data-count]').forEach(function(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    // Skip if already handled by stats-strip script
+    if (el.closest('#stats-strip')) return;
+    ScrollTrigger.create({
+      trigger: el, start: 'top 88%', once: true,
+      onEnter: function() {
+        gsap.to({val:0}, {val:target, duration:1.5, ease:'power2.out',
+          onUpdate: function() { el.textContent = Math.round(this.targets()[0].val) + suffix; }
+        });
+      }
+    });
+  });
+
+  // CTA section: heading text wipe
+  var ctaHeading = document.getElementById('cta-heading');
+  if (ctaHeading) {
+    // Split into lines for stagger
+    var lines = ctaHeading.innerHTML.split('<br>');
+    ctaHeading.innerHTML = lines.map(function(l) {
+      return '<span style="display:block;overflow:hidden"><span class="cta-line" style="display:block;will-change:transform">' + l + '</span></span>';
+    }).join('');
+    gsap.from(ctaHeading.querySelectorAll('.cta-line'), {
+      scrollTrigger: {trigger: ctaHeading, start: 'top 80%', once: true},
+      y: '100%', duration: .75, stagger: .12, ease: 'power3.out'
+    });
+  }
+
+
   console.log('YGP Animations initialised');
 
 })();
