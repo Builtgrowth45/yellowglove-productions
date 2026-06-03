@@ -278,6 +278,34 @@
     if(ctaContact) ctaTl.from(ctaContact,{x:30,opacity:0,duration:0.6,ease:'power2.out'},0.5);
   }
 
+
+
+  // ── HERO LOGO DRAMATIC ENTRANCE ────────────────────────────────────────────
+  var heroLogo=document.getElementById('yg-logo-hero');
+  var heroImg=document.getElementById('hero-logo-img');
+  if(heroLogo&&heroImg){
+    // Logo explodes in from scale 0 with glow
+    gsap.to(heroLogo,{opacity:1,y:0,duration:0.01,delay:0.9});
+    gsap.fromTo(heroImg,
+      {scale:0.4,opacity:0,filter:'blur(20px) drop-shadow(0 0 0px rgba(251,176,56,0))'},
+      {scale:1,opacity:1,filter:'blur(0px) drop-shadow(0 0 80px rgba(251,176,56,.45))',
+       duration:1.1,ease:'power3.out',delay:0.95,
+       onComplete:function(){
+         // After entrance: pulse the glow
+         gsap.to(heroImg,{filter:'drop-shadow(0 0 30px rgba(251,176,56,.2))',duration:2,ease:'power1.inOut',yoyo:true,repeat:-1});
+       }
+    });
+    // Eyebrow line
+    var eyebrow=document.querySelector('.yg-video-content p:first-child');
+    if(eyebrow) gsap.from(eyebrow,{opacity:0,y:20,duration:0.7,ease:'power2.out',delay:0.5});
+    // Tagline
+    var tagline=document.querySelector('.yg-video-content p:last-of-type');
+    if(tagline) gsap.from(tagline,{opacity:0,y:20,duration:0.7,ease:'power2.out',delay:1.5});
+    // CTAs
+    var ctaDiv=document.querySelector('.yg-video-content div[style*=flex]');
+    if(ctaDiv) gsap.from(ctaDiv.children,{opacity:0,y:20,duration:0.6,stagger:0.15,ease:'power2.out',delay:1.7});
+  }
+
   console.log('YGP Animations initialised');
 
 })();
