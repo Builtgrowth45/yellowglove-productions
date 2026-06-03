@@ -1,0 +1,236 @@
+
+/* =========================================================
+   YGP Animations — GSAP + Lenis + Magnetic Cursor
+   Requires: gsap, gsap/ScrollTrigger, lenis (CDN)
+   ========================================================= */
+
+(function () {
+  'use strict';
+
+  var YGP = YGP || {};
+
+  // ── 1. PAGE TRANSITION WIPE ───────────────────────────────────────────────
+  // Yellow curtain that opens on load and closes on navigation
+  var curtain = document.createElement('div');
+  curtain.id = 'yg-curtain';
+  curtain.style.cssText = 'position:fixed;inset:0;background:#FBB038;z-index:9999;transform-origin:left;pointer-events:none';
+  document.body.appendChild(curtain);
+
+  // Reveal: curtain sweeps out to the right on page load
+  gsap.fromTo(curtain,
+    { scaleX: 1 },
+    { scaleX: 0, duration: 0.8, ease: 'power3.inOut', transformOrigin: 'right', delay: 0.1 }
+  );
+
+  // Intercept internal link clicks for exit transition
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel')) return;
+    if (link.target === '_blank') return;
+    e.preventDefault();
+    gsap.to(curtain, {
+      scaleX: 1, duration: 0.5, ease: 'power3.inOut', transformOrigin: 'left',
+      onComplete: function () { window.location.href = href; }
+    });
+  });
+
+
+  // ── 2. LENIS SMOOTH SCROLL ────────────────────────────────────────────────
+  var lenis;
+  try {
+    lenis = new Lenis({
+      duration: 1.25,
+      easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+      orientation: 'vertical',
+      smoothWheel: true,
+    });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  } catch (e) {
+    console.warn('Lenis not available, using native scroll');
+  }
+
+
+  // ── 3. HERO KINETIC TYPOGRAPHY ────────────────────────────────────────────
+  // Split .yg-hero-wordmark spans into individual characters, animate in
+  var wordmark = document.querySelector('.yg-hero-wordmark');
+  if (wordmark) {
+    var spans = wordmark.querySelectorAll('span');
+    spans.forEach(function (span, wi) {
+      var text = span.textContent.trim();
+      var isAccent = span.classList.contains('accent');
+      span.innerHTML = text.split('').map(function (char) {
+        return '<span class=yg-char style=display:inline-block;overflow:hidden;line-height:1>' +
+          '<span class=yg-char-inner style=display:inline-block>' + (char === ' ' ? '&nbsp;' : char) + '</span>' +
+          '</span>';
+      }).join('');
+      var chars = span.querySelectorAll('.yg-char-inner');
+      // Alternate: odd words from bottom, even from top
+      var yFrom = wi % 2 === 0 ? '120%' : '-120%';
+      gsap.from(chars, {
+        y: yFrom,
+        opacity: 0,
+        duration: 0.75,
+        stagger: 0.04,
+        ease: 'power3.out',
+        delay: 0.4 + wi * 0.2,
+      });
+    });
+  }
+
+  // ── 4. HERO SUBTITLE + CTA REVEAL ─────────────────────────────────────────
+  var heroContent = document.querySelector('.yg-video-content');
+  if (heroContent) {
+    var subtitle = heroContent.querySelector('p:last-of-type');
+    var ctaBlock = heroContent.querySelector('div[style*=flex]');
+    if (subtitle) gsap.from(subtitle, { opacity: 0, y: 20, duration: 0.7, ease: 'power2.out', delay: 1.4 });
+    if (ctaBlock) gsap.from(ctaBlock.children, { opacity: 0, y: 20, duration: 0.6, stagger: 0.15, ease: 'power2.out', delay: 1.6 });
+  }
+
+
+  // ── 5. STATS COUNT-UP ─────────────────────────────────────────────────────
+  var statNums = document.querySelectorAll('.stat-num[data-count]');
+  statNums.forEach(function (el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.getAttribute('data-suffix') || '%';
+    el.textContent = '0' + suffix;
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 85%',
+      once: true,
+      onEnter: function () {
+        gsap.to({ val: 0 }, {
+          val: target,
+          duration: 1.8,
+          ease: 'power2.out',
+          onUpdate: function () {
+            el.textContent = Math.round(this.targets()[0].val) + suffix;
+          }
+        });
+      }
+    });
+  });
+
+
+  // ── 6. SCROLLTRIGGER SECTION REVEALS ─────────────────────────────────────
+  // Generic fade-up for sections without data-anime (avoids Crafto conflicts)
+  var revealEls = document.querySelectorAll('.yg-reveal');
+  revealEls.forEach(function (el) {
+    gsap.from(el, {
+      scrollTrigger: { trigger: el, start: 'top 88%', once: true },
+      opacity: 0, y: 40, duration: 0.8, ease: 'power2.out',
+    });
+  });
+
+  // Stagger reveal for yg-reveal-stagger children
+  var staggerGroups = document.querySelectorAll('.yg-reveal-stagger');
+  staggerGroups.forEach(function (group) {
+    gsap.from(group.children, {
+      scrollTrigger: { trigger: group, start: 'top 85%', once: true },
+      opacity: 0, y: 50, duration: 0.7, stagger: 0.1, ease: 'power2.out',
+    });
+  });
+
+
+  // ── 7. MARQUEE ────────────────────────────────────────────────────────────
+  var marquees = document.querySelectorAll('.yg-marquee-inner');
+  marquees.forEach(function (m) {
+    var clone = m.cloneNode(true);
+    m.parentNode.appendChild(clone);
+    var speed = parseFloat(m.parentNode.dataset.speed) || 40;
+    var totalWidth = m.offsetWidth;
+    gsap.to([m, clone], {
+      x: '-' + totalWidth + 'px',
+      duration: totalWidth / speed,
+      ease: 'none',
+      repeat: -1,
+      modifiers: {
+        x: gsap.utils.unitize(function (x) { return parseFloat(x) % totalWidth; })
+      }
+    });
+
+    // Pause on hover
+    m.parentNode.addEventListener('mouseenter', function () { gsap.globalTimeline.pause(); });
+    m.parentNode.addEventListener('mouseleave', function () { gsap.globalTimeline.resume(); });
+  });
+
+
+  // ── 8. MAGNETIC CURSOR ───────────────────────────────────────────────────
+  var outerCursor = document.querySelector('.circle-cursor-outer');
+  var innerCursor = document.querySelector('.circle-cursor-inner');
+  if (outerCursor && innerCursor) {
+    var mx = window.innerWidth / 2;
+    var my = window.innerHeight / 2;
+    var cx = mx; var cy = my;
+
+    document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; });
+
+    // Smooth cursor follow
+    gsap.ticker.add(function () {
+      cx += (mx - cx) * 0.12;
+      cy += (my - cy) * 0.12;
+      innerCursor.style.transform = 'translate(' + (mx - 10) + 'px,' + (my - 10) + 'px)';
+      outerCursor.style.transform = 'translate(' + (cx - 20) + 'px,' + (cy - 20) + 'px)';
+    });
+
+    // Magnetic effect on interactive elements
+    var magnetics = document.querySelectorAll('a, button, .yg-work-item, .yg-svc-cell, .testi');
+    magnetics.forEach(function (el) {
+      el.addEventListener('mouseenter', function () {
+        gsap.to(outerCursor, { scale: 2.2, duration: 0.3, ease: 'power2.out' });
+        gsap.to(innerCursor, { scale: 0, duration: 0.2 });
+      });
+      el.addEventListener('mouseleave', function () {
+        gsap.to(outerCursor, { scale: 1, duration: 0.4, ease: 'elastic.out(1,0.4)' });
+        gsap.to(innerCursor, { scale: 1, duration: 0.3 });
+      });
+    });
+
+    // CTA buttons: full fill
+    document.querySelectorAll('.btn.yg-btn-primary, a[style*=background:#FBB038]').forEach(function (btn) {
+      btn.addEventListener('mouseenter', function () {
+        gsap.to(outerCursor, { backgroundColor: 'rgba(251,176,56,0.3)', borderColor: '#FBB038', scale: 2.5, duration: 0.3 });
+      });
+      btn.addEventListener('mouseleave', function () {
+        gsap.to(outerCursor, { backgroundColor: 'transparent', borderColor: '#FBB038', scale: 1, duration: 0.4, ease: 'elastic.out(1,0.4)' });
+      });
+    });
+  }
+
+
+  // ── 9. WORK CARD HOVER SCALE ─────────────────────────────────────────────
+  document.querySelectorAll('.yg-work-item').forEach(function (card) {
+    var img = card.querySelector('img');
+    if (!img) return;
+    card.addEventListener('mouseenter', function () { gsap.to(img, { scale: 1.07, duration: 0.6, ease: 'power2.out' }); });
+    card.addEventListener('mouseleave', function () { gsap.to(img, { scale: 1, duration: 0.5, ease: 'power2.out' }); });
+  });
+
+
+  // ── 10. SERVICE CARD NUMBER REVEAL ────────────────────────────────────────
+  document.querySelectorAll('.yg-svc-num').forEach(function (num) {
+    gsap.from(num, {
+      scrollTrigger: { trigger: num, start: 'top 90%', once: true },
+      opacity: 0, x: -30, duration: 0.6, ease: 'power2.out',
+    });
+  });
+
+  // ── 11. SECTION HEADING UNDERLINE DRAW ────────────────────────────────────
+  // Draws a yellow underline under section headings on scroll entry
+  document.querySelectorAll('.yg-eyebrow').forEach(function (eye) {
+    ScrollTrigger.create({
+      trigger: eye, start: 'top 85%', once: true,
+      onEnter: function () {
+        gsap.from(eye.querySelector('span:first-child') || eye, {
+          scaleX: 0, transformOrigin: 'left', duration: 0.6, ease: 'power3.out'
+        });
+      }
+    });
+  });
+
+  console.log('YGP Animations initialised');
+
+})();
