@@ -568,3 +568,6 @@ a:focus-visible,button:focus-visible,.push-button:focus-visible,.yg-filter-btn:f
 img{transition:transform .6s cubic-bezier(.25,.46,.45,.94);}
 /* Prevent layout shift on font load */
 .yg-hero-wordmark,.bc-title,.bc-num{font-display:swap;}
+
+.stat-block{transition:background .3s;}
+.stat-block:hover{background:rgba(0,0,0,.07);}
