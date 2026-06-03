@@ -523,3 +523,19 @@ a { cursor: none; }
 .yg-svc-cell::before{content:'';position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%),rgba(251,176,56,.08),transparent 50%);opacity:0;transition:opacity .5s ease;pointer-events:none}
 .yg-svc-cell:hover::before{opacity:1}
 .yg-svc-cell:hover{background:rgba(26,26,46,.6)}
+
+/* ── CTA buttons (override Crafto) ─────────────────────────── */
+.yg-cta-btn-primary,.yg-cta-btn-outline{
+  display:inline-flex!important;align-items:center!important;
+  font-family:'Barlow Condensed',sans-serif!important;font-size:12px!important;
+  font-weight:700!important;letter-spacing:.22em!important;text-transform:uppercase!important;
+  padding:16px 40px!important;text-decoration:none!important;
+  border-radius:3px!important;transition:background .25s,color .25s,transform .25s!important;cursor:none!important;
+}
+.yg-cta-btn-primary{color:#FBB038!important;background:#0a0a0a!important;border:2px solid #0a0a0a!important;}
+.yg-cta-btn-primary:hover{background:transparent!important;color:#0a0a0a!important;transform:translateY(-3px)!important;}
+.yg-cta-btn-outline{color:#0a0a0a!important;background:transparent!important;border:2px solid #0a0a0a!important;}
+.yg-cta-btn-outline:hover{background:#0a0a0a!important;color:#FBB038!important;transform:translateY(-3px)!important;}
+/* Yellow BG CTA section */
+.yg-cta-section{background:#FBB038;overflow:hidden;position:relative;}
+.yg-cta-icon-bg{position:absolute;right:-40px;bottom:-60px;font-size:18rem;opacity:.07;line-height:1;user-select:none;pointer-events:none;transform:rotate(-15deg);}

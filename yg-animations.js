@@ -231,6 +231,53 @@
     });
   });
 
+
+
+  // ── CTA SECTION ANIMATION ────────────────────────────────────────────────
+  // Dramatic reveal: heading words drop in from above when section enters view
+  var ctaSection=document.getElementById('yg-cta');
+  if(ctaSection){
+    var ctaHeading=ctaSection.querySelector('.yg-cta-heading');
+    var ctaEyebrow=ctaSection.querySelector('p');
+    var ctaBody=ctaSection.querySelector('p:nth-of-type(2)');
+    var ctaBtns=ctaSection.querySelectorAll('.yg-cta-btn-primary,.yg-cta-btn-outline');
+    var ctaContact=ctaSection.querySelector('.col-lg-4');
+    var ctaIcon=ctaSection.querySelector('.yg-cta-icon-bg');
+
+    var ctaTl=gsap.timeline({
+      scrollTrigger:{trigger:ctaSection,start:'top 70%',once:true}
+    });
+
+    // Background wipe from left
+    ctaTl.fromTo(ctaSection,{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:0.01,ease:'none'});
+
+    // Large icon spins in
+    if(ctaIcon){
+      ctaTl.from(ctaIcon,{scale:0.3,opacity:0,rotation:-40,duration:1.2,ease:'power3.out'},0);
+    }
+
+    // Eyebrow line
+    if(ctaEyebrow){
+      ctaTl.from(ctaEyebrow,{x:-40,opacity:0,duration:0.5,ease:'power2.out'},0.1);
+    }
+
+    // Heading: split words, stagger in
+    if(ctaHeading){
+      var words=ctaHeading.textContent.trim().split(/s+/);
+      ctaHeading.innerHTML=words.map(function(w){
+        return '<span class=cta-word style=display:inline-block;overflow:hidden;vertical-align:top;margin-right:.25em><span class=cta-word-inner style=display:inline-block>'+w+'</span></span>';
+      }).join(' ');
+      ctaTl.from(ctaHeading.querySelectorAll('.cta-word-inner'),{
+        y:'110%',duration:0.65,stagger:0.08,ease:'power3.out'
+      },0.2);
+    }
+
+    // Body text + buttons
+    if(ctaBody) ctaTl.from(ctaBody,{y:20,opacity:0,duration:0.5,ease:'power2.out'},0.7);
+    if(ctaBtns.length) ctaTl.from(ctaBtns,{y:20,opacity:0,duration:0.5,stagger:0.12,ease:'power2.out'},0.85);
+    if(ctaContact) ctaTl.from(ctaContact,{x:30,opacity:0,duration:0.6,ease:'power2.out'},0.5);
+  }
+
   console.log('YGP Animations initialised');
 
 })();
