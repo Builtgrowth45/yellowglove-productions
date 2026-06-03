@@ -1,0 +1,224 @@
+[
+  {
+    "id": "oruen-france",
+    "title": "Oruen - France",
+    "subtitle": "Brand Film Production",
+    "client": "Oruen",
+    "year": "2025",
+    "type": "Brand Film",
+    "location": "France",
+    "services": [
+      "Direction",
+      "Cinematography",
+      "Editing",
+      "Colour Grade"
+    ],
+    "hero": "https://drive.google.com/thumbnail?id=1mmiocf0Mk3b-CErDPlmInz6DdrlUlZFa&sz=w1600",
+    "gallery": [
+      "https://drive.google.com/thumbnail?id=1mmiocf0Mk3b-CErDPlmInz6DdrlUlZFa&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1EiLlh94JTn7VFIChpK8L2IFWUKLR1eAq&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1uH6ZwLid3lBCD-S9sHEPZFqiyig0KEHs&sz=w1200"
+    ],
+    "desc": "A brand film shot on location in France for Oruen. A cinematic piece capturing the essence of the brand with dramatic landscape photography and intimate behind-the-scenes moments.",
+    "next": "lboto-racing"
+  },
+  {
+    "id": "lboto-racing",
+    "title": "Lboto Racing",
+    "subtitle": "Automotive Photography",
+    "client": "Lboto Racing",
+    "year": "2025",
+    "type": "Automotive",
+    "location": "UK",
+    "services": [
+      "Photography",
+      "Post-Production",
+      "Colour Grade"
+    ],
+    "hero": "https://drive.google.com/thumbnail?id=1yyakh3VDVIgvLIh3uapT1827lJyCj_LG&sz=w1600",
+    "gallery": [
+      "https://drive.google.com/thumbnail?id=1yyakh3VDVIgvLIh3uapT1827lJyCj_LG&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1cXdvPf5DvWa0iS22gxlIu59bOnrhC4-t&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1Uvehqzmnz93PrwofD2VYM7bIbaMKLeTE&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1yyakh3VDVIgvLIh3uapT1827lJyCj_LG&sz=w1200"
+    ],
+    "desc": "High-octane automotive photography for Lboto Racing. Dramatic angles, motion blur, and precision timing to capture the speed and power of competitive motorsport.",
+    "next": "bd-car-shoot"
+  },
+  {
+    "id": "bd-car-shoot",
+    "title": "BD Car Shoot",
+    "subtitle": "Commercial Automotive",
+    "client": "BD",
+    "year": "2025",
+    "type": "Commercial",
+    "location": "UK",
+    "services": [
+      "Video Production",
+      "Photography",
+      "Editing"
+    ],
+    "hero": "https://drive.google.com/thumbnail?id=1rlFiv1XrCKZQS7gJvHUVF_t0CZBIR5U6&sz=w1600",
+    "gallery": [
+      "https://drive.google.com/thumbnail?id=1rlFiv1XrCKZQS7gJvHUVF_t0CZBIR5U6&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1h6pOhjRSRPrSfIvfBMgT8KobfC2JY5ta&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1Uoi7nD2MUXKMzZmNmPg01v4nF_UMrOwW&sz=w1200"
+    ],
+    "desc": "Commercial automotive shoot blending cinematic video with high-resolution photography. Created assets for digital campaigns, print advertising, and social media content.",
+    "next": "brain-summit"
+  },
+  {
+    "id": "brain-summit",
+    "title": "BRAIN Summit",
+    "subtitle": "Medical Documentary",
+    "client": "BRAIN",
+    "year": "2025",
+    "type": "Documentary",
+    "location": "UK",
+    "services": [
+      "Documentary",
+      "Direction",
+      "Editing",
+      "Colour Grade"
+    ],
+    "hero": "https://drive.google.com/thumbnail?id=1XMYWrhTRb8b25PRI4yEtCtujaFvraPcH&sz=w1600",
+    "gallery": [
+      "https://drive.google.com/thumbnail?id=1XMYWrhTRb8b25PRI4yEtCtujaFvraPcH&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1LPW4MiaBBAlU_rL8v1jVAQfk91JDiuwF&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1GDye3adyaHdeFWYWDj-8vg4ahGftU2qq&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1v1AA5wIrFNiktPhBHN0JtMzzDfL604v_&sz=w1200"
+    ],
+    "desc": "Documentary coverage of the BRAIN medical summit. Capturing keynote presentations, expert interviews, and networking moments in a polished, broadcast-ready format.",
+    "next": "tmet"
+  },
+  {
+    "id": "tmet",
+    "title": "TMET Learning Day",
+    "subtitle": "Event Videography",
+    "client": "The Mead Educational Trust",
+    "year": "2025",
+    "type": "Event",
+    "location": "UK",
+    "services": [
+      "Event Video",
+      "Photography",
+      "Editing"
+    ],
+    "hero": "https://drive.google.com/thumbnail?id=1Ws7AlLI-dqHfY8h35_zsCNenenotXmPr&sz=w1600",
+    "gallery": [
+      "https://drive.google.com/thumbnail?id=1Ws7AlLI-dqHfY8h35_zsCNenenotXmPr&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1xj_ZRWl3zSGTTispRjHUhmVYhzPujfF9&sz=w1200"
+    ],
+    "desc": "Full event coverage for The Mead Educational Trust annual learning day. Delivered highlight reel, full session recordings, and photography for internal communications.",
+    "next": "microsoft-unframed"
+  },
+  {
+    "id": "oruen-poland",
+    "title": "Oruen - Poland",
+    "subtitle": "Brand Film Production",
+    "client": "Oruen",
+    "year": "2025",
+    "type": "Brand Film",
+    "location": "Poland",
+    "services": [
+      "Direction",
+      "Cinematography",
+      "Editing",
+      "Colour Grade"
+    ],
+    "hero": "https://drive.google.com/thumbnail?id=1jzUyNJwScguFDdBHi7VvoLuAyh2VgZhJ&sz=w1600",
+    "gallery": [
+      "https://drive.google.com/thumbnail?id=1jzUyNJwScguFDdBHi7VvoLuAyh2VgZhJ&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1F9giXFGRYWxh3JJJeVUhyGGiJ7uClfqM&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1qOyBvJiQ0OFbxeGkGkguKiEmnI2zo9VX&sz=w1200"
+    ],
+    "desc": "The second chapter of our Oruen brand film series, shot across Poland. Continuing the visual language established in France, expanded into new locations and storylines.",
+    "next": "oruen-france"
+  },
+  {
+    "id": "microsoft-unframed",
+    "title": "Microsoft Unframed",
+    "subtitle": "Corporate Event Coverage",
+    "client": "Microsoft",
+    "year": "2025",
+    "type": "Corporate",
+    "location": "UK",
+    "services": [
+      "Video Production",
+      "Photography",
+      "BTS"
+    ],
+    "hero": "https://drive.google.com/thumbnail?id=179j8R6qjKx7iwgwm3FwshirymXuYwV9z&sz=w1600",
+    "gallery": [
+      "https://drive.google.com/thumbnail?id=179j8R6qjKx7iwgwm3FwshirymXuYwV9z&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1QsJdT7SO-iFWGqsDHdJryVhPkT-Z7ts6&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1Efp7S8eYwqeyNhWt-5qwzQeZSVQck56v&sz=w1200"
+    ],
+    "desc": "Behind-the-scenes video and photography for Microsoft Unframed. Capturing the energy and atmosphere of one of the most creative corporate brand experiences of the year.",
+    "next": "oruen-france"
+  },
+  {
+    "id": "nero",
+    "title": "Nero",
+    "subtitle": "Editorial Photography",
+    "client": "Nero",
+    "year": "2025",
+    "type": "Editorial",
+    "location": "UK",
+    "services": [
+      "Photography",
+      "Direction",
+      "Post-Production"
+    ],
+    "hero": "https://drive.google.com/thumbnail?id=1mB5v5Kgocj7U5uglbNn36WF3tUj1KU17&sz=w1600",
+    "gallery": [
+      "https://drive.google.com/thumbnail?id=1mB5v5Kgocj7U5uglbNn36WF3tUj1KU17&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1MzVMBIRuSNJ3hL0VniEXovKXchIlcpPz&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1ZmoF8_93Y97YE8gYgXG6hF7knrlPMsyl&sz=w1200"
+    ],
+    "desc": "Editorial photography project for Nero. High-contrast, fashion-forward imagery designed for editorial placement and brand campaign use across print and digital.",
+    "next": "bd-car-shoot"
+  },
+  {
+    "id": "deen-health",
+    "title": "Deen Health",
+    "subtitle": "Healthcare Brand",
+    "client": "Deen Health",
+    "year": "2025",
+    "type": "Healthcare",
+    "location": "UK",
+    "services": [
+      "Video Production",
+      "Photography",
+      "Editing"
+    ],
+    "hero": "https://drive.google.com/thumbnail?id=1zjPALuBWIKCt7x7iy7M-_zHsNBieitvy&sz=w1600",
+    "gallery": [
+      "https://drive.google.com/thumbnail?id=1zjPALuBWIKCt7x7iy7M-_zHsNBieitvy&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1ixjagSW01iCOPiLzUyGamv_HVpIdHj0u&sz=w1200"
+    ],
+    "desc": "Brand video and photography for Deen Health. Warm, human-centred visual storytelling that communicates care, trust, and professionalism across all patient-facing channels.",
+    "next": "tmet"
+  },
+  {
+    "id": "3ds-summit",
+    "title": "3DS Summit 2025",
+    "subtitle": "Conference Photography",
+    "client": "3DS",
+    "year": "2025",
+    "type": "Conference",
+    "location": "UK",
+    "services": [
+      "Conference Photography",
+      "Event Video"
+    ],
+    "hero": "https://drive.google.com/thumbnail?id=1jlv77KnTnd9Z6zNupcjtMAocGiM71Cyo&sz=w1600",
+    "gallery": [
+      "https://drive.google.com/thumbnail?id=1jlv77KnTnd9Z6zNupcjtMAocGiM71Cyo&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1DV7s8SQ2eY8NhX-jUY__09V98bQkkRAi&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1jlv77KnTnd9Z6zNupcjtMAocGiM71Cyo&sz=w1200"
+    ],
+    "desc": "Photography and video coverage of the 3DS Conference 2025. Full event documentation capturing keynotes, workshops, and networking moments for post-event communications.",
+    "next": "oruen-france"
+  }
+]
