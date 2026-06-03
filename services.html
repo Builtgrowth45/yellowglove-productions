@@ -2,224 +2,144 @@
 <html class="no-js" lang="en">
 <head>
   <title>Services - Yellow Glove Productions</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <link rel="shortcut icon" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/vendors.min.css"/><link rel="stylesheet" href="css/icon.min.css"/><link rel="stylesheet" href="css/style.css"/><link rel="stylesheet" href="css/responsive.css"/><link rel="stylesheet" href="demos/yellowglove/yellowglove.css"/>
   <style>
-.yg-feat-card{position:relative;background:#111;border:1px solid #252525;border-radius:12px;overflow:hidden;padding:48px;transition:border-color .3s,transform .3s;cursor:none;}
-.yg-feat-card::before{content:";position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%),rgba(251,176,56,.1),transparent 45%);opacity:0;transition:opacity .5s;pointer-events:none;z-index:0;}
-.yg-feat-card:hover::before{opacity:1;}
-.yg-feat-card:hover{border-color:rgba(251,176,56,.4);transform:translateY(-4px);}
-.yg-feat-card>*{position:relative;z-index:1;}
-.yg-feat-card .card-num{font-family:Bebas Neue,sans-serif;font-size:5rem;color:#FBB038;opacity:.12;line-height:1;margin-bottom:20px;}
-.yg-feat-card .card-icon{font-size:3rem;margin-bottom:20px;opacity:.7;display:block;}
-.yg-feat-card h3{font-family:Bebas Neue,sans-serif;font-size:2.5rem;letter-spacing:.04em;color:#fff;margin:0 0 14px;}
-.yg-feat-card p{font-family:Poppins,sans-serif;font-size:.875rem;line-height:1.75;color:#888;margin-bottom:24px;max-width:44ch;}
-.yg-feat-card.featured h3{font-size:3.5rem;}
-.yg-feat-card.featured p{font-size:.95rem;max-width:50ch;}
-.yg-pill{display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:4px 10px;border-radius:2px;margin:2px;}
-.yg-svc-mini{background:#111;border:1px solid #252525;border-radius:8px;padding:32px;transition:border-color .3s,background .3s;}
-.yg-svc-mini:hover{border-color:rgba(251,176,56,.35);background:#161616;}
-.yg-svc-mini h4{font-family:Bebas Neue,sans-serif;font-size:1.6rem;letter-spacing:.04em;color:#fff;margin:0 0 10px;}
-.yg-svc-mini p{font-size:.8rem;line-height:1.65;color:#777;margin:0 0 16px;}
-.yg-divider-line{height:1px;background:linear-gradient(to right,transparent,#252525 20%,#252525 80%,transparent);margin:0;border:none;}
-  </style>
+body{background:#0a0a0a!important;}
+.svc-card{transition:transform .35s ease,box-shadow .35s ease;cursor:none;}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(0,0,0,.5);}
+.svc-card:hover img{transform:scale(1.08)!important;}
+</style>
 </head>
-<body data-mobile-nav-style="classic" class="custom-cursor" style="background:#0a0a0a">
+<body data-mobile-nav-style="classic" class="custom-cursor">
 <div class="cursor-page-inner"><div class="circle-cursor circle-cursor-inner"></div><div class="circle-cursor circle-cursor-outer"></div></div>
 <header><nav class="navbar navbar-expand-lg header-transparent header-dark disable-fixed"><div class="container-fluid"><div class="col-auto col-lg-2 me-lg-0 me-auto d-none d-lg-flex"><div class="header-icon"><div class="header-social-icon icon social-text-style-01 alt-font"><a href="https://www.instagram.com/yellowglove" target="_blank" rel="noopener">Ig.</a><a href="https://www.youtube.com/@yellowglove" target="_blank" rel="noopener">Yt.</a></div></div></div><div class="col-auto"><a class="navbar-brand" href="index.html"><img src="images/yg-logo.png" alt="Yellow Glove Productions" style="max-height:70px"></a></div><div class="col-auto col-lg-2 text-end"><div class="header-icon"><div class="header-push-button hamburger-push-button icon"><div class="push-button" role="button" tabindex="0"><span></span><span></span><b class="push-button-text position-absolute top-3px left-minus-50px fs-13 fw-500">Menu</b></div></div></div></div></div></nav><div class="push-menu hamburger-nav header-dark hamburger-menu-simple" style="background-color:#1A1A2E"><a href="javascript:void(0);" class="close-menu bg-white fs-18"><i class="fa-solid fa-xmark text-dark-gray"></i></a><div class="d-flex flex-column align-items-center justify-content-center h-100 p-5 sm-px-0"><a class="hamburger-logo mb-40px" href="index.html"><img src="images/yg-logo.png" alt="Yellow Glove Productions" style="max-height:90px"></a><div class="row align-items-center justify-content-center w-100"><div class="hamburger-menu menu-list-wrapper col-lg-5 col-md-12 lg-no-margin offset-lg-1" data-scroll-options='{theme:light}'><nav><ul class="menu-item-list fw-300 alt-font ls-minus-2px"><li class="menu-item"><a href="index.html" class="nav-link">home</a></li><li class="menu-item"><a href="services.html" class="nav-link">services</a></li><li class="menu-item"><a href="work.html" class="nav-link">work</a></li><li class="menu-item"><a href="about.html" class="nav-link">about</a></li><li class="menu-item"><a href="blog.html" class="nav-link">blog</a></li><li class="menu-item"><a href="contact.html" class="nav-link">contact</a></li></ul></nav></div></div></div></div></header>
 <main id="main-content">
 
-<section style="padding:160px 0 80px;background:#0a0a0a">
-<div class="container">
-  <p style="font-family:Barlow Condensed,sans-serif;font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:#FBB038;margin-bottom:20px;display:flex;align-items:center;gap:12px">
-    <span style="width:32px;height:1px;background:#FBB038;display:inline-block"></span>What We Offer
-  </p>
-  <div class="row align-items-end">
-    <div class="col-lg-8">
-      <h1 style="font-family:Bebas Neue,sans-serif;font-size:clamp(4rem,10vw,9.5rem);line-height:.88;letter-spacing:.02em;color:#fff;margin:0">WE CREATE<br><span style="color:#FBB038">EVERYTHING.</span></h1>
-    </div>
-    <div class="col-lg-4 text-lg-end">
-      <p style="font-family:Poppins,sans-serif;font-size:.95rem;line-height:1.8;color:#777;margin:0;max-width:38ch;margin-left:auto">From brand films to product photography. Documentaries to 360-degree tours. If it needs a lens, we handle it.</p>
-    </div>
+<section style="padding:160px 0 80px;background:#0a0a0a"><div class="container">
+  <p style="font-family:Barlow Condensed,sans-serif;font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:#FBB038;margin-bottom:20px;display:flex;align-items:center;gap:12px"><span style="width:32px;height:1px;background:#FBB038;display:inline-block"></span>What We Offer</p>
+  <div class="row align-items-end g-4">
+    <div class="col-lg-7"><h1 style="font-family:Bebas Neue,sans-serif;font-size:clamp(4rem,10vw,9.5rem);line-height:.88;letter-spacing:.02em;color:#fff;margin:0">WE CREATE<br><span style="color:#FBB038">EVERYTHING.</span></h1></div>
+    <div class="col-lg-5"><p style="font-family:Poppins,sans-serif;font-size:.95rem;line-height:1.8;color:#777;margin:0">From brand films to product photography. Documentaries to 360-degree tours. If it needs a lens, we handle it.</p></div>
   </div>
-</div>
-</section>
+</div></section>
 
-<section style="padding:0 0 20px;background:#0a0a0a">
-<div class="container">
+<section style="padding:0 0 24px;background:#0a0a0a"><div class="container">
 
   <div class="row g-3 mb-3">
     <div class="col-lg-8">
-      <div class="yg-feat-card featured" style="min-height:380px">
-        <div class="card-num">01</div>
-        <h3>Brand Films</h3>
-        <p>Cinematic brand stories that make people feel something. From TV commercials to viral social campaigns, we craft video that doesn't just communicate — it converts.</p>
-        <div><span class="yg-pill">TV</span><span class="yg-pill">Digital</span><span class="yg-pill">Social</span><span class="yg-pill">Commercial</span></div>
-        <a href="contact.html" style="display:inline-block;margin-top:28px;font-family:Barlow Condensed,sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#FBB038;text-decoration:none;border-bottom:1px solid rgba(251,176,56,.3);padding-bottom:3px">Start a project &rarr;</a>
-      </div>
+      <div style="position:relative;border-radius:12px;overflow:hidden;min-height:400px" class="svc-card"><img src="https://drive.google.com/thumbnail?id=1mmiocf0Mk3b-CErDPlmInz6DdrlUlZFa&sz=w1200" alt="Brand Films" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease"><div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.6) 55%,rgba(10,10,10,.3) 100%)"></div><div style="position:relative;z-index:2;padding:44px"><div style="font-family:Bebas Neue,sans-serif;font-size:4rem;color:#FBB038;opacity:.18;line-height:1;margin-bottom:16px">01</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2.75rem;letter-spacing:.03em;color:#ffffff;margin:0 0 16px;line-height:.95">Brand Films</h3><p style="font-family:Poppins,sans-serif;font-size:.85rem;line-height:1.75;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:40ch">Cinematic stories that make people feel something. From TV commercials to viral social campaigns — video that converts.</p><div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">TV</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Digital</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Social</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Commercial</span></div></div></div>
     </div>
     <div class="col-lg-4">
-      <div class="yg-feat-card" style="min-height:380px;background-image:url('https://drive.google.com/thumbnail?id=1C8Of0cRpaVENFfKMewrqT0YMNG7ACJ0u&sz=w800');background-size:cover;background-position:center">
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.95) 0%,rgba(10,10,10,.4) 60%,transparent 100%);border-radius:12px"></div>
-        <div style="position:absolute;bottom:40px;left:40px;right:40px">
-          <div class="card-num" style="font-size:3rem;margin-bottom:12px">06</div>
-          <h3>Photography</h3>
-          <p style="font-size:.82rem">Editorial, commercial, events, headshots. Images that elevate everything they touch.</p>
-          <div><span class="yg-pill">Commercial</span><span class="yg-pill">Events</span><span class="yg-pill">Editorial</span></div>
-        </div>
-      </div>
+      <div style="position:relative;border-radius:12px;overflow:hidden;min-height:400px" class="svc-card"><img src="https://drive.google.com/thumbnail?id=1C8Of0cRpaVENFfKMewrqT0YMNG7ACJ0u&sz=w1200" alt="Photography" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease"><div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.6) 55%,rgba(10,10,10,.3) 100%)"></div><div style="position:relative;z-index:2;padding:44px"><div style="font-family:Bebas Neue,sans-serif;font-size:4rem;color:#FBB038;opacity:.18;line-height:1;margin-bottom:16px">06</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2.75rem;letter-spacing:.03em;color:#ffffff;margin:0 0 16px;line-height:.95">Photography</h3><p style="font-family:Poppins,sans-serif;font-size:.85rem;line-height:1.75;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:40ch">Editorial, commercial, events, headshots. Images that elevate everything they touch.</p><div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Commercial</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Events</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Editorial</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Headshots</span></div></div></div>
     </div>
   </div>
 
   <div class="row g-3 mb-3">
     <div class="col-lg-4">
-      <div class="yg-feat-card" style="height:100%;min-height:300px">
-        <span class="card-icon">🎪</span>
-        <div class="card-num"style="font-size:3.5rem;margin-bottom:12px">03</div>
-        <h3>Event Videography</h3>
-        <p>From packed conference halls to intimate award ceremonies — we capture the energy, the moments, the stories that make your event worth remembering.</p>
-        <div><span class="yg-pill">Highlights</span><span class="yg-pill">Full Recording</span><span class="yg-pill">Social Cuts</span><span class="yg-pill">Conference</span></div>
-      </div>
+      <div style="position:relative;border-radius:12px;overflow:hidden;min-height:360px" class="svc-card"><img src="https://drive.google.com/thumbnail?id=1Ws7AlLI-dqHfY8h35_zsCNenenotXmPr&sz=w1200" alt="Event Videography" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease"><div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.6) 55%,rgba(10,10,10,.3) 100%)"></div><div style="position:relative;z-index:2;padding:44px"><div style="font-family:Bebas Neue,sans-serif;font-size:4rem;color:#FBB038;opacity:.18;line-height:1;margin-bottom:16px">03</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2.75rem;letter-spacing:.03em;color:#ffffff;margin:0 0 16px;line-height:.95">Event Videography</h3><p style="font-family:Poppins,sans-serif;font-size:.85rem;line-height:1.75;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:40ch">Packed halls, intimate ceremonies, landmark moments. We make your event unforgettable long after the day ends.</p><div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Highlights</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Full Recording</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Social Cuts</span></div></div></div>
     </div>
     <div class="col-lg-4">
-      <div class="yg-feat-card" style="height:100%;min-height:300px">
-        <span class="card-icon">🛒</span>
-        <div class="card-num"style="font-size:3.5rem;margin-bottom:12px">04</div>
-        <h3>E-Commerce Video</h3>
-        <p>Product videos that make people add to cart. We understand pacing, lighting, and the psychology of purchase.</p>
-        <div><span class="yg-pill">Product Demo</span><span class="yg-pill">Unboxing</span><span class="yg-pill">Lifestyle</span><span class="yg-pill">Ads</span></div>
-      </div>
+      <div style="position:relative;border-radius:12px;overflow:hidden;min-height:360px" class="svc-card"><img src="https://drive.google.com/thumbnail?id=1rlFiv1XrCKZQS7gJvHUVF_t0CZBIR5U6&sz=w1200" alt="E-Commerce Video" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease"><div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.6) 55%,rgba(10,10,10,.3) 100%)"></div><div style="position:relative;z-index:2;padding:44px"><div style="font-family:Bebas Neue,sans-serif;font-size:4rem;color:#FBB038;opacity:.18;line-height:1;margin-bottom:16px">04</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2.75rem;letter-spacing:.03em;color:#ffffff;margin:0 0 16px;line-height:.95">E-Commerce Video</h3><p style="font-family:Poppins,sans-serif;font-size:.85rem;line-height:1.75;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:40ch">Product videos that make people add to cart. We understand pacing, lighting, and the psychology of purchase.</p><div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Product Demo</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Unboxing</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Lifestyle</span></div></div></div>
     </div>
     <div class="col-lg-4">
-      <div class="yg-feat-card" style="height:100%;min-height:300px">
-        <span class="card-icon">🏢</span>
-        <div class="card-num"style="font-size:3.5rem;margin-bottom:12px">02</div>
-        <h3>Corporate Video</h3>
-        <p>Internal comms, testimonials, case studies, recruitment films. Polished content that builds trust and drives action inside and outside your business.</p>
-        <div><span class="yg-pill">Brand Films</span><span class="yg-pill">Training</span><span class="yg-pill">Testimonials</span><span class="yg-pill">Culture</span></div>
-      </div>
+      <div style="position:relative;border-radius:12px;overflow:hidden;min-height:360px" class="svc-card"><img src="https://drive.google.com/thumbnail?id=179j8R6qjKx7iwgwm3FwshirymXuYwV9z&sz=w1200" alt="Corporate Video" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease"><div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.6) 55%,rgba(10,10,10,.3) 100%)"></div><div style="position:relative;z-index:2;padding:44px"><div style="font-family:Bebas Neue,sans-serif;font-size:4rem;color:#FBB038;opacity:.18;line-height:1;margin-bottom:16px">02</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2.75rem;letter-spacing:.03em;color:#ffffff;margin:0 0 16px;line-height:.95">Corporate Video</h3><p style="font-family:Poppins,sans-serif;font-size:.85rem;line-height:1.75;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:40ch">Internal comms, testimonials, case studies, recruitment films. Content that builds trust inside and outside your business.</p><div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Brand Films</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Training</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Testimonials</span></div></div></div>
     </div>
   </div>
 
-  <div class="row g-3 mb-3">
+  <div class="row g-3">
     <div class="col-lg-8">
-      <div class="yg-feat-card" style="background-image:url('https://drive.google.com/thumbnail?id=1XMYWrhTRb8b25PRI4yEtCtujaFvraPcH&sz=w1200');background-size:cover;background-position:center;min-height:300px">
-        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,.95) 0%,rgba(10,10,10,.5) 60%,rgba(10,10,10,.2) 100%);border-radius:12px"></div>
-        <div style="position:relative;z-index:2">
-          <div class="card-num">07</div>
-          <h3>Documentary &amp; Episodic</h3>
-          <p style="max-width:50ch">Long-form storytelling that builds authority and moves audiences. Real stories told with cinematic craft.</p>
-          <div><span class="yg-pill">Documentary</span><span class="yg-pill">Episodic</span><span class="yg-pill">Brand Story</span></div>
-        </div>
-      </div>
+      <div style="position:relative;border-radius:12px;overflow:hidden;min-height:340px" class="svc-card"><img src="https://drive.google.com/thumbnail?id=1XMYWrhTRb8b25PRI4yEtCtujaFvraPcH&sz=w1200" alt="Documentary & Episodic" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease"><div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.6) 55%,rgba(10,10,10,.3) 100%)"></div><div style="position:relative;z-index:2;padding:44px"><div style="font-family:Bebas Neue,sans-serif;font-size:4rem;color:#FBB038;opacity:.18;line-height:1;margin-bottom:16px">07</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2.75rem;letter-spacing:.03em;color:#ffffff;margin:0 0 16px;line-height:.95">Documentary & Episodic</h3><p style="font-family:Poppins,sans-serif;font-size:.85rem;line-height:1.75;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:40ch">Long-form storytelling that builds authority. Real stories told with cinematic craft that lasts.</p><div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Documentary</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Episodic</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Brand Story</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Long-Form</span></div></div></div>
     </div>
     <div class="col-lg-4">
-      <div class="yg-feat-card" style="height:100%;min-height:300px;background:#1A1A2E">
-        <span class="card-icon">🏆</span>
-        <div class="card-num" style="font-size:3.5rem;margin-bottom:12px">05</div>
-        <h3>Awards Videos</h3>
-        <p>Ceremony highlights, winner profiles, and the emotional moments that make recognition feel real.</p>
-        <div><span class="yg-pill">Ceremony</span><span class="yg-pill">Highlights</span><span class="yg-pill">Profiles</span></div>
-      </div>
+      <div style="position:relative;border-radius:12px;overflow:hidden;min-height:340px;background:#1A1A2E" class="svc-card"><img src="https://drive.google.com/thumbnail?id=1jlv77KnTnd9Z6zNupcjtMAocGiM71Cyo&sz=w1200" alt="Awards Videos" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease"><div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,10,.92) 0%,rgba(10,10,10,.6) 55%,rgba(10,10,10,.3) 100%)"></div><div style="position:relative;z-index:2;padding:44px"><div style="font-family:Bebas Neue,sans-serif;font-size:4rem;color:#FBB038;opacity:.18;line-height:1;margin-bottom:16px">05</div><h3 style="font-family:Bebas Neue,sans-serif;font-size:2.75rem;letter-spacing:.03em;color:#ffffff;margin:0 0 16px;line-height:.95">Awards Videos</h3><p style="font-family:Poppins,sans-serif;font-size:.85rem;line-height:1.75;color:rgba(255,255,255,.7);margin-bottom:20px;max-width:40ch">The emotion, the recognition, the moments that define excellence. Captured.</p><div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Ceremony</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Highlights</span><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.12);padding:4px 10px;border-radius:2px;margin:2px">Profiles</span></div></div></div>
     </div>
   </div>
-</div>
-</section>
 
-<hr class="yg-divider-line" style="margin:40px 0">
+</div></section>
 
-<section style="padding:60px 0 20px;background:#0a0a0a">
-<div class="container">
-  <p style="font-family:Barlow Condensed,sans-serif;font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:#FBB038;margin-bottom:16px;display:flex;align-items:center;gap:12px">
-    <span style="width:32px;height:1px;background:#FBB038;display:inline-block"></span>More Services
-  </p>
+<section style="padding:80px 0;background:#0a0a0a"><div class="container">
+  <p style="font-family:Barlow Condensed,sans-serif;font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:#FBB038;margin-bottom:16px;display:flex;align-items:center;gap:12px"><span style="width:32px;height:1px;background:#FBB038;display:inline-block"></span>More Services</p>
   <h2 style="font-family:Bebas Neue,sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:.92;color:#fff;margin:0 0 48px">EVERYTHING ELSE<br><span style="color:#FBB038">WE DO.</span></h2>
-</div>
-</section>
-
-<section style="padding:0 0 100px;background:#0a0a0a">
-<div class="container">
   <div class="row g-3">
     <div class="col-md-6 col-lg-3">
-      <div class="yg-svc-mini">
-        <span style="font-size:1.75rem;display:block;margin-bottom:12px;opacity:.75">🎙</span>
-        <h4>PODCAST VIDEOS</h4>
-        <p>Make your podcast look as good as it sounds.</p>
-        <div><span class="yg-pill">Video Podcast</span><span class="yg-pill">Studio</span><span class="yg-pill">Remote</span><span class="yg-pill">Social</span></div>
+      <div style="background:#111;border:1px solid #252525;border-radius:8px;padding:32px;height:100%;transition:border-color .3s" class="svc-mini-card">
+        <div style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#FBB038;opacity:.25;line-height:1;margin-bottom:12px">08</div>
+        <h4 style="font-family:Bebas Neue,sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#fff;margin:0 0 10px">PODCAST VIDEOS</h4>
+        <p style="font-family:Poppins,sans-serif;font-size:.78rem;line-height:1.65;color:#777;margin:0 0 14px">Make your podcast look as good as it sounds.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Video Podcast</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Studio</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Remote</span></div>
       </div>
     </div>
     <div class="col-md-6 col-lg-3">
-      <div class="yg-svc-mini">
-        <span style="font-size:1.75rem;display:block;margin-bottom:12px;opacity:.75">🎵</span>
-        <h4>MUSIC VIDEOS</h4>
-        <p>Bring your music to life with visual narrative.</p>
-        <div><span class="yg-pill">Narrative</span><span class="yg-pill">Performance</span><span class="yg-pill">Concept</span></div>
+      <div style="background:#111;border:1px solid #252525;border-radius:8px;padding:32px;height:100%;transition:border-color .3s" class="svc-mini-card">
+        <div style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#FBB038;opacity:.25;line-height:1;margin-bottom:12px">09</div>
+        <h4 style="font-family:Bebas Neue,sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#fff;margin:0 0 10px">MUSIC VIDEOS</h4>
+        <p style="font-family:Poppins,sans-serif;font-size:.78rem;line-height:1.65;color:#777;margin:0 0 14px">Bring your music to life with visual narrative.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Narrative</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Performance</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Concept</span></div>
       </div>
     </div>
     <div class="col-md-6 col-lg-3">
-      <div class="yg-svc-mini">
-        <span style="font-size:1.75rem;display:block;margin-bottom:12px;opacity:.75">🏠</span>
-        <h4>PROPERTY VIDEOS</h4>
-        <p>Make your listings stand out with stunning walkthroughs.</p>
-        <div><span class="yg-pill">Residential</span><span class="yg-pill">Commercial</span><span class="yg-pill">Airbnb</span></div>
+      <div style="background:#111;border:1px solid #252525;border-radius:8px;padding:32px;height:100%;transition:border-color .3s" class="svc-mini-card">
+        <div style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#FBB038;opacity:.25;line-height:1;margin-bottom:12px">10</div>
+        <h4 style="font-family:Bebas Neue,sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#fff;margin:0 0 10px">PROPERTY VIDEOS</h4>
+        <p style="font-family:Poppins,sans-serif;font-size:.78rem;line-height:1.65;color:#777;margin:0 0 14px">Stunning walkthroughs that sell.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Residential</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Commercial</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Airbnb</span></div>
       </div>
     </div>
     <div class="col-md-6 col-lg-3">
-      <div class="yg-svc-mini">
-        <span style="font-size:1.75rem;display:block;margin-bottom:12px;opacity:.75">🔄</span>
-        <h4>360 TOURS</h4>
-        <p>Immersive virtual experiences for venues and showrooms.</p>
-        <div><span class="yg-pill">Virtual Tour</span><span class="yg-pill">Venue</span><span class="yg-pill">Hotel</span></div>
+      <div style="background:#111;border:1px solid #252525;border-radius:8px;padding:32px;height:100%;transition:border-color .3s" class="svc-mini-card">
+        <div style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#FBB038;opacity:.25;line-height:1;margin-bottom:12px">11</div>
+        <h4 style="font-family:Bebas Neue,sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#fff;margin:0 0 10px">360 TOURS</h4>
+        <p style="font-family:Poppins,sans-serif;font-size:.78rem;line-height:1.65;color:#777;margin:0 0 14px">Immersive virtual experiences for venues.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Virtual Tour</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Venue</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Hotel</span></div>
       </div>
     </div>
     <div class="col-md-6 col-lg-3">
-      <div class="yg-svc-mini">
-        <span style="font-size:1.75rem;display:block;margin-bottom:12px;opacity:.75">✦</span>
-        <h4>ANIMATION</h4>
-        <p>Explainer videos and motion graphics that make complex simple.</p>
-        <div><span class="yg-pill">Explainer</span><span class="yg-pill">Motion Graphics</span><span class="yg-pill">2D/3D</span></div>
+      <div style="background:#111;border:1px solid #252525;border-radius:8px;padding:32px;height:100%;transition:border-color .3s" class="svc-mini-card">
+        <div style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#FBB038;opacity:.25;line-height:1;margin-bottom:12px">12</div>
+        <h4 style="font-family:Bebas Neue,sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#fff;margin:0 0 10px">ANIMATION</h4>
+        <p style="font-family:Poppins,sans-serif;font-size:.78rem;line-height:1.65;color:#777;margin:0 0 14px">Motion graphics that make complex simple.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Explainer</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Motion Graphics</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">2D/3D</span></div>
       </div>
     </div>
     <div class="col-md-6 col-lg-3">
-      <div class="yg-svc-mini">
-        <span style="font-size:1.75rem;display:block;margin-bottom:12px;opacity:.75">💻</span>
-        <h4>WEBINARS</h4>
-        <p>Professional webinar production from setup to post.</p>
-        <div><span class="yg-pill">Live</span><span class="yg-pill">Recorded</span><span class="yg-pill">Presentation</span></div>
+      <div style="background:#111;border:1px solid #252525;border-radius:8px;padding:32px;height:100%;transition:border-color .3s" class="svc-mini-card">
+        <div style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#FBB038;opacity:.25;line-height:1;margin-bottom:12px">13</div>
+        <h4 style="font-family:Bebas Neue,sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#fff;margin:0 0 10px">WEBINARS</h4>
+        <p style="font-family:Poppins,sans-serif;font-size:.78rem;line-height:1.65;color:#777;margin:0 0 14px">Professional production from setup to post.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Live</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Recorded</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Presentation</span></div>
       </div>
     </div>
     <div class="col-md-6 col-lg-3">
-      <div class="yg-svc-mini">
-        <span style="font-size:1.75rem;display:block;margin-bottom:12px;opacity:.75">🎧</span>
-        <h4>PODCAST PRODUCTION</h4>
-        <p>End-to-end audio and video podcast production.</p>
-        <div><span class="yg-pill">Recording</span><span class="yg-pill">Editing</span><span class="yg-pill">Branding</span></div>
+      <div style="background:#111;border:1px solid #252525;border-radius:8px;padding:32px;height:100%;transition:border-color .3s" class="svc-mini-card">
+        <div style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#FBB038;opacity:.25;line-height:1;margin-bottom:12px">14</div>
+        <h4 style="font-family:Bebas Neue,sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#fff;margin:0 0 10px">PODCAST PRODUCTION</h4>
+        <p style="font-family:Poppins,sans-serif;font-size:.78rem;line-height:1.65;color:#777;margin:0 0 14px">End-to-end audio and video podcast creation.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Recording</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Editing</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Branding</span></div>
       </div>
     </div>
     <div class="col-md-6 col-lg-3">
-      <div class="yg-svc-mini">
-        <span style="font-size:1.75rem;display:block;margin-bottom:12px;opacity:.75">🎞</span>
-        <h4>VIDEO SERIES</h4>
-        <p>Episodic content that keeps audiences hooked.</p>
-        <div><span class="yg-pill">Series</span><span class="yg-pill">Episodic</span><span class="yg-pill">YouTube</span></div>
+      <div style="background:#111;border:1px solid #252525;border-radius:8px;padding:32px;height:100%;transition:border-color .3s" class="svc-mini-card">
+        <div style="font-family:Bebas Neue,sans-serif;font-size:2rem;color:#FBB038;opacity:.25;line-height:1;margin-bottom:12px">15</div>
+        <h4 style="font-family:Bebas Neue,sans-serif;font-size:1.5rem;letter-spacing:.04em;color:#fff;margin:0 0 10px">VIDEO SERIES</h4>
+        <p style="font-family:Poppins,sans-serif;font-size:.78rem;line-height:1.65;color:#777;margin:0 0 14px">Episodic content that keeps audiences coming back.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px"><span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Series</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">Episodic</span> <span style="display:inline-block;font-family:Barlow Condensed,sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FBB038;background:rgba(251,176,56,.1);padding:3px 8px;border-radius:2px">YouTube</span></div>
       </div>
     </div>
   </div>
-</div>
-</section>
+</div></section>
 
 <section class="yg-cta-section" id="yg-cta">
   <span class="yg-cta-icon-bg" aria-hidden="true">落</span>
   <div class="container" style="position:relative;z-index:1;padding:100px 0">
     <div class="row align-items-center">
       <div class="col-lg-8">
-        <p style="font-family:Barlow Condensed,sans-serif;font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:rgba(0,0,0,.45);margin:0 0 20px;display:flex;align-items:center;gap:12px"><span style="width:32px;height:1px;background:rgba(0,0,0,.3);display:inline-block"></span>Unsure what you need?</p>
-        <h2 style="font-family:Bebas Neue,sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.88;color:#0a0a0a;margin:0">LETS FIGURE<br>IT OUT TOGETHER.</h2>
-        <p style="font-family:Poppins,sans-serif;font-size:.95rem;color:rgba(0,0,0,.6);margin:28px 0 40px;max-width:52ch;line-height:1.75">Just tell us what you're trying to achieve and we'll point you in the right direction. No commitment required.</p>
+        <p style="font-family:Barlow Condensed,sans-serif;font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:rgba(0,0,0,.45);margin:0 0 20px;display:flex;align-items:center;gap:12px"><span style="width:32px;height:1px;background:rgba(0,0,0,.3);display:inline-block"></span>Not sure what you need?</p>
+        <h2 style="font-family:Bebas Neue,sans-serif;font-size:clamp(3.5rem,8vw,7rem);line-height:.88;color:#0a0a0a;margin:0">LETS FIGURE IT<br>OUT TOGETHER.</h2>
+        <p style="font-family:Poppins,sans-serif;font-size:.95rem;color:rgba(0,0,0,.6);margin:28px 0 40px;max-width:52ch;line-height:1.75">Just tell us what you're trying to achieve. No commitment required.</p>
         <div style="display:flex;gap:16px;flex-wrap:wrap">
           <a href="contact.html" class="yg-cta-btn-primary">Get in Touch &rarr;</a>
           <a href="faqs.html" class="yg-cta-btn-outline">Read FAQs</a>
@@ -230,7 +150,69 @@
 </section>
 
 </main>
-<footer class="yg-footer"><div class="container"><div class="row align-items-center gy-3"><div class="col-md-4"><a href="index.html"><img src="images/yg-logo.png" alt="Yellow Glove Productions" style="max-height:40px"></a></div><div class="col-md-4 text-md-center"><p style="margin:0;font-size:.65rem;color:#555">&copy; 2025 Yellow Glove Productions Ltd.</p></div><nav class="col-md-4 text-md-end" style="display:flex;gap:14px;justify-content:flex-end;align-items:center"><a href="https://www.instagram.com/yellowglove" target="_blank" style="color:#555;text-decoration:none;font-size:1rem">Ig.</a><a href="faqs.html" style="color:#444;text-decoration:none;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase">FAQs</a></nav></div></div></footer>
-<script src="js/jquery.js"></script><script src="js/vendors.min.js"></script><script src="js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script><script>gsap.registerPlugin(ScrollTrigger);</script><script src="yg-animations.js"></script>
-<script>document.querySelectorAll('.yg-feat-card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});});</script>
+<footer class="yg-footer"><div class="container"><div class="row align-items-center gy-3"><div class="col-md-4"><a href="index.html"><img src="images/yg-logo.png" alt="Yellow Glove Productions" style="max-height:40px"></a></div><div class="col-md-4 text-md-center"><p style="margin:0;font-size:.65rem;color:#555">&copy; 2025 Yellow Glove Productions Ltd.</p></div><nav class="col-md-4 text-md-end" style="display:flex;gap:14px;justify-content:flex-end;align-items:center"><a href="https://www.instagram.com/yellowglove" target="_blank" style="color:#555;text-decoration:none">Ig.</a></nav></div></div></footer>
+<script src="js/jquery.js"></script>
+<script src="js/vendors.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>gsap.registerPlugin(ScrollTrigger);</script>
+<script src="yg-animations.js"></script>
+<script>
+(function(){
+  // Lenis smooth scroll
+  try{var lenis=new Lenis({duration:1.2,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t));}});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000);});gsap.ticker.lagSmoothing(0);}catch(e){}
+  // Page curtain
+  var curtain=document.createElement('div');
+  curtain.style.cssText='position:fixed;inset:0;background:#FBB038;z-index:9999;transform-origin:left;pointer-events:none';
+  document.body.appendChild(curtain);
+  gsap.fromTo(curtain,{scaleX:1},{scaleX:0,duration:.8,ease:'power3.inOut',transformOrigin:'right',delay:.1});
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href]');if(!a)return;var href=a.getAttribute('href');if(!href||href.startsWith('#')||href.startsWith('http')||href.startsWith('mailto')||href.startsWith('tel')||a.target==='_blank')return;e.preventDefault();gsap.to(curtain,{scaleX:1,duration:.5,ease:'power3.inOut',transformOrigin:'left',onComplete:function(){window.location.href=href;}});});
+  // Stagger in cards on scroll
+  gsap.utils.toArray('.svc-card').forEach(function(card,i){
+    gsap.from(card,{scrollTrigger:{trigger:card,start:'top 90%',once:true},opacity:0,y:60,duration:.7,ease:'power2.out',delay:(i%3)*0.1});
+  });
+  gsap.utils.toArray('.svc-mini-card').forEach(function(card,i){
+    gsap.from(card,{scrollTrigger:{trigger:card,start:'top 92%',once:true},opacity:0,y:40,duration:.6,ease:'power2.out',delay:(i%4)*0.08});
+  });
+  // Magnetic cursor
+  var outerCursor=document.querySelector('.circle-cursor-outer');
+  var innerCursor=document.querySelector('.circle-cursor-inner');
+  if(outerCursor&&innerCursor){
+    var mx=window.innerWidth/2,my=window.innerHeight/2,cx=mx,cy=my;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;});
+    gsap.ticker.add(function(){
+      cx+=(mx-cx)*.12;cy+=(my-cy)*.12;
+      innerCursor.style.transform='translate('+(mx-10)+'px,'+(my-10)+'px)';
+      outerCursor.style.transform='translate('+(cx-20)+'px,'+(cy-20)+'px)';
+    });
+    document.querySelectorAll('.svc-card,.svc-mini-card,a,button').forEach(function(el){
+      el.addEventListener('mouseenter',function(){gsap.to(outerCursor,{scale:2.2,duration:.3,ease:'power2.out'});});
+      el.addEventListener('mouseleave',function(){gsap.to(outerCursor,{scale:1,duration:.4,ease:'elastic.out(1,.4)'});});
+    });
+  }
+  // Card image parallax + mouse glow via CSS var
+  document.querySelectorAll('.svc-card').forEach(function(c){
+    c.addEventListener('mousemove',function(e){
+      var r=c.getBoundingClientRect();
+      var xPct=(e.clientX-r.left)/r.width;
+      var yPct=(e.clientY-r.top)/r.height;
+      var img=c.querySelector('img');
+      if(img){img.style.transform='scale(1.06) translate('+(xPct*-8)+'px,'+(yPct*-8)+'px)';}
+      c.style.setProperty('--mx',(e.clientX-r.left)+'px');
+      c.style.setProperty('--my',(e.clientY-r.top)+'px');
+    });
+    c.addEventListener('mouseleave',function(){
+      var img=c.querySelector('img');
+      if(img){img.style.transform='scale(1)';}
+    });
+  });
+  // Mini card hover
+  document.querySelectorAll('.svc-mini-card').forEach(function(c){
+    c.addEventListener('mouseenter',function(){c.style.borderColor='rgba(251,176,56,.4)';c.style.background='#161616';});
+    c.addEventListener('mouseleave',function(){c.style.borderColor='#252525';c.style.background='#111';});
+  });
+})();
+</script>
 </body></html>
